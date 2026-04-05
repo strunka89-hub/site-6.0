@@ -1,9 +1,9 @@
 /* Premium tech + calm interface — Дарьяна Ушакова */
 
 :root {
-  --bg: #0c0e12;
-  --bg-elevated: #12151c;
-  --surface: #161a24;
+  --bg: #e4a719;
+  --bg-elevated: #cdd922;
+  --surface: #3057b3;
   --border: rgba(255, 255, 255, 0.08);
   --text: #e8eaef;
   --text-muted: #9aa3b2;
@@ -60,7 +60,7 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 20%, transparent 70%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, rgb(44, 20, 117) 20%, transparent 70%);
 }
 
 .bg-scan {
@@ -102,7 +102,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem 1.5rem;
-  background: rgba(12, 14, 18, 0.85);
+  background: rgba(23, 53, 111, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
