@@ -1719,6 +1719,174 @@ body.has-custom-cursor button {
   text-decoration: underline;
 }
 
+/* GlowCard — интерактивное свечение по курсору */
+.glow-card {
+  --base: 220;
+  --spread: 200;
+  --radius: 14;
+  --border: 3;
+  --saturation: 100;
+  --lightness: 70;
+  --bg-spot-opacity: 0.14;
+  --border-spot-opacity: 0.9;
+  --border-light-opacity: 0.45;
+  --backdrop: hsl(230 45% 18% / 0.42);
+  --backup-border: rgba(255, 255, 255, 0.1);
+  --size: 200;
+  --outer: 1;
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  border-radius: calc(var(--radius) * 1px);
+  --border-size: calc(var(--border) * 1px);
+  --spotlight-size: calc(var(--size) * 1px);
+  --hue: calc(var(--base) + (var(--xp, 0.5) * var(--spread)));
+  background-image: radial-gradient(
+    var(--spotlight-size) var(--spotlight-size) at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+    hsl(var(--hue) calc(var(--saturation) * 1%) calc(var(--lightness) * 1%) / var(--bg-spot-opacity)),
+    transparent 65%
+  );
+  background-color: var(--backdrop);
+  background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  border: var(--border-size) solid var(--backup-border);
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.45);
+}
+
+.glow-card--hue-purple {
+  --base: 280;
+  --spread: 300;
+}
+
+.glow-card--hue-green {
+  --base: 120;
+  --spread: 200;
+}
+
+.glow-card--hue-orange {
+  --base: 30;
+  --spread: 200;
+}
+
+.glow-card--hue-blue {
+  --base: 220;
+  --spread: 200;
+}
+
+.glow-card__content {
+  position: relative;
+  z-index: 2;
+}
+
+.glow-card__fx {
+  pointer-events: none;
+}
+
+.glow-card[data-glow]::before,
+.glow-card[data-glow]::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: calc(var(--border-size) * -1);
+  border: var(--border-size) solid transparent;
+  border-radius: calc(var(--radius) * 1px);
+  background-attachment: fixed;
+  background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 0;
+  mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
+  mask-clip: padding-box, border-box;
+  -webkit-mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
+  -webkit-mask-clip: padding-box, border-box;
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+.glow-card[data-glow]::before {
+  background-image: radial-gradient(
+    calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+    hsl(var(--hue) calc(var(--saturation) * 1%) calc(var(--lightness) * 0.72 * 1%) / var(--border-spot-opacity)),
+    transparent 100%
+  );
+  filter: brightness(1.35);
+}
+
+.glow-card[data-glow]::after {
+  background-image: radial-gradient(
+    calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+    hsl(0 0% 100% / var(--border-light-opacity)),
+    transparent 100%
+  );
+}
+
+.glow-card[data-glow] > [data-glow].glow-card__fx {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: calc(var(--radius) * 1px);
+  opacity: var(--outer);
+  filter: blur(calc(var(--border-size) * 10));
+  background: none;
+  border: none;
+  will-change: filter;
+}
+
+.glow-card--hero {
+  --backdrop: rgba(15, 28, 72, 0.5);
+  --backup-border: rgba(255, 255, 255, 0.12);
+  --bg-spot-opacity: 0.12;
+  animation: none;
+}
+
+.hero__panel.glow-card {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.hero__panel.glow-card .glow-card__content {
+  padding: 1.75rem 1.5rem 2rem;
+  backdrop-filter: blur(14px);
+  border-radius: calc(var(--radius) * 1px);
+}
+
+.glow-section {
+  padding: 1.5rem 1.35rem 1.75rem;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .glow-section {
+    padding: 1.65rem 1.5rem 2rem;
+  }
+}
+
+.glow-section .section__title {
+  margin-top: 0;
+}
+
+#pricing .glow-section {
+  background: transparent;
+}
+
+.calculator-section .glow-card {
+  --backdrop: hsl(230 40% 22% / 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-card {
+    background-attachment: scroll;
+  }
+
+  .glow-card[data-glow]::before,
+  .glow-card[data-glow]::after {
+    background-attachment: scroll;
+  }
+}
+
 /* Мобильные акценты из ТЗ: компактный hero */
 @media (max-width: 599px) {
   .hero {
@@ -1729,6 +1897,12 @@ body.has-custom-cursor button {
     background-position: 62% center;
   }
   .hero__panel {
+    padding: 1.35rem 1.15rem 1.5rem;
+  }
+  .hero__panel.glow-card {
+    padding: 0;
+  }
+  .hero__panel.glow-card .glow-card__content {
     padding: 1.35rem 1.15rem 1.5rem;
   }
   .hero__title {
