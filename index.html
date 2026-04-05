@@ -15,15 +15,15 @@
   <div class="bg-scan" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="logo" href="#">Дарьяна Ушакова</a>
+    <a class="logo cursor-target" href="#">Дарьяна Ушакова</a>
     <nav class="nav" aria-label="Основная навигация">
-      <a href="#requests">Задачи</a>
-      <a href="#services">Услуги</a>
-      <a href="#process">Как работаю</a>
-      <a href="#calculator">Калькулятор</a>
-      <a href="#about">Обо мне</a>
+      <a class="cursor-target" href="#requests" data-i18n="nav.tasks">Задачи</a>
+      <a class="cursor-target" href="#services" data-i18n="nav.services">Услуги</a>
+      <a class="cursor-target" href="#process" data-i18n="nav.process">Как работаю</a>
+      <a class="cursor-target" href="#calculator" data-i18n="nav.calculator">Калькулятор</a>
+      <a class="cursor-target" href="#about" data-i18n="nav.about">Обо мне</a>
     </nav>
-    <a class="btn btn--sm header-cta" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">Telegram</a>
+    <button type="button" class="btn btn--sm btn--neon header-cta lang-toggle cursor-target" id="lang-toggle" aria-label="Switch interface to English">EN</button>
   </header>
 
   <main>
@@ -43,13 +43,19 @@
       </div>
       <div class="hero__inner">
         <div class="hero__panel">
-          <p class="hero__kicker animate-in">Промпт-инженер · веб-кодер</p>
-          <h1 class="hero__title animate-in animate-in--delay-1">Внедряю ИИ в бизнес, контент и сайт — понятно, спокойно и под вашу задачу</h1>
-          <p class="hero__lead animate-in animate-in--delay-2">Помогаю экспертам и бизнесу выстроить понятную систему: контент через ChatGPT или другие нейросети, AI-ассистенты, сайты, калькуляторы и цифровые решения без перегруза и лишней сложности.</p>
-          <p class="hero__sig animate-in animate-in--delay-3">Дарьяна Ушакова — промпт-инженер и веб-кодер</p>
+          <p class="hero__kicker animate-in" data-i18n="hero.kicker">Промпт-инженер · веб-кодер</p>
+          <h1 class="hero__title animate-in animate-in--delay-1" data-i18n="hero.title">Внедряю ИИ в бизнес, контент и сайт — понятно, спокойно и под вашу задачу</h1>
+          <p class="hero__lead animate-in animate-in--delay-2" data-i18n="hero.lead">Помогаю экспертам и бизнесу выстроить понятную систему: контент через ChatGPT или другие нейросети, AI-ассистенты, сайты, калькуляторы и цифровые решения без перегруза и лишней сложности.</p>
+          <p class="hero__sig animate-in animate-in--delay-3" data-i18n="hero.sig">Дарьяна Ушакова — промпт-инженер и веб-кодер</p>
           <div class="hero__actions animate-in animate-in--delay-4">
-            <a class="btn btn--primary" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">Обсудить задачу <span class="btn__arrow" aria-hidden="true">→</span></a>
-            <a class="btn btn--ghost" href="#calculator">Рассчитать стоимость <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn-colorful cursor-target" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">
+              <span class="btn-colorful__glow" aria-hidden="true"></span>
+              <span class="btn-colorful__inner">
+                <span data-i18n="hero.cta1">Обсудить задачу</span>
+                <svg class="btn-colorful__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </span>
+            </a>
+            <a class="btn btn--default btn--neon btn--pill cursor-target" href="#calculator"><span data-i18n="hero.cta2">Рассчитать стоимость</span> <span class="btn__arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -58,11 +64,21 @@
     <!-- 2. Коротко о главном -->
     <section class="section section--alt" id="main">
       <div class="container narrow">
-        <h2 class="section__title">Не просто нейросети, а рабочая система под ваш бизнес</h2>
-        <div class="prose">
-          <p>Я не «делаю нейросети ради нейросетей». Я помогаю использовать ИИ так, чтобы он действительно упрощал работу, экономил время и помогал вам понятнее доносить ценность до клиента.</p>
-          <p>Если вы уже пробовали ChatGPT, ботов или сайт, но всё выглядело сыро, неудобно или не давало нужного эффекта, это можно собрать по-другому.</p>
-          <p class="accent-line">Спокойно. По шагам. Под вашу задачу.</p>
+        <div class="electric-border" data-electric-border data-eb-color="#7df9ff" data-eb-speed="1" data-eb-chaos="0.12" data-eb-radius="16" data-eb-thickness="2">
+          <div class="eb-canvas-wrap" aria-hidden="true"><canvas class="eb-canvas"></canvas></div>
+          <div class="eb-layers" aria-hidden="true">
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-bg-glow"></div>
+          </div>
+          <div class="eb-content">
+            <h2 class="section__title" data-i18n="main.title">Не просто нейросети, а рабочая система под ваш бизнес</h2>
+            <div class="prose">
+              <p data-i18n="main.p1">Я не «делаю нейросети ради нейросетей». Я помогаю использовать ИИ так, чтобы он действительно упрощал работу, экономил время и помогал вам понятнее доносить ценность до клиента.</p>
+              <p data-i18n="main.p2">Если вы уже пробовали ChatGPT, ботов или сайт, но всё выглядело сыро, неудобно или не давало нужного эффекта, это можно собрать по-другому.</p>
+              <p class="accent-line" data-i18n="main.accent">Спокойно. По шагам. Под вашу задачу.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -70,32 +86,32 @@
     <!-- 3. Запросы -->
     <section class="section" id="requests">
       <div class="container">
-        <h2 class="section__title">С какими задачами ко мне приходят</h2>
+        <h2 class="section__title" data-i18n="requests.title">С какими задачами ко мне приходят</h2>
         <div class="cards-grid cards-grid--5">
-          <article class="card card--hover">
-            <h3 class="card__title">Промпты для бизнеса и контент через ChatGPT</h3>
-            <p class="card__text">Когда непонятно, что писать, как строить контент, как получать нормальные тексты через ИИ и как перестать тратить на это часы.</p>
-            <p class="card__hint">Помогает сократить время и упростить контент</p>
+          <article class="card card--hover cursor-target">
+            <h3 class="card__title" data-i18n="card1.t">Промпты для бизнеса и контент через ChatGPT</h3>
+            <p class="card__text" data-i18n="card1.x">Когда непонятно, что писать, как строить контент, как получать нормальные тексты через ИИ и как перестать тратить на это часы.</p>
+            <p class="card__hint" data-i18n="card1.h">Помогает сократить время и упростить контент</p>
           </article>
-          <article class="card card--hover">
-            <h3 class="card__title">AI-ассистенты и автоматизация задач</h3>
-            <p class="card__text">Когда в работе много повторяющихся действий, ручных ответов, однотипных сценариев и хочется часть процессов упростить.</p>
-            <p class="card__hint">Меньше рутины в повторяющихся процессах</p>
+          <article class="card card--hover cursor-target">
+            <h3 class="card__title" data-i18n="card2.t">AI-ассистенты и автоматизация задач</h3>
+            <p class="card__text" data-i18n="card2.x">Когда в работе много повторяющихся действий, ручных ответов, однотипных сценариев и хочется часть процессов упростить.</p>
+            <p class="card__hint" data-i18n="card2.h">Меньше рутины в повторяющихся процессах</p>
           </article>
-          <article class="card card--hover">
-            <h3 class="card__title">Сайт для эксперта или бизнеса</h3>
-            <p class="card__text">Когда нужно понятно показать услугу, выстроить структуру сайта, усилить доверие и сделать путь к заявке проще.</p>
-            <p class="card__hint">Яснее услуга и путь к заявке</p>
+          <article class="card card--hover cursor-target">
+            <h3 class="card__title" data-i18n="card3.t">Сайт для эксперта или бизнеса</h3>
+            <p class="card__text" data-i18n="card3.x">Когда нужно понятно показать услугу, выстроить структуру сайта, усилить доверие и сделать путь к заявке проще.</p>
+            <p class="card__hint" data-i18n="card3.h">Яснее услуга и путь к заявке</p>
           </article>
-          <article class="card card--hover">
-            <h3 class="card__title">Калькуляторы, квизы и мини-сервисы</h3>
-            <p class="card__text">Когда важно вовлечь клиента, упростить расчёт, повысить интерес к сайту и сделать подачу сильнее.</p>
-            <p class="card__hint">Больше вовлечения на сайте</p>
+          <article class="card card--hover cursor-target">
+            <h3 class="card__title" data-i18n="card4.t">Калькуляторы, квизы и мини-сервисы</h3>
+            <p class="card__text" data-i18n="card4.x">Когда важно вовлечь клиента, упростить расчёт, повысить интерес к сайту и сделать подачу сильнее.</p>
+            <p class="card__hint" data-i18n="card4.h">Больше вовлечения на сайте</p>
           </article>
-          <article class="card card--hover">
-            <h3 class="card__title">Презентации, PDF, гайды и упаковка услуг</h3>
-            <p class="card__text">Когда у вас есть знания и опыт, но их нужно собрать в понятный, аккуратный и рабочий формат.</p>
-            <p class="card__hint">Знания в аккуратном рабочем формате</p>
+          <article class="card card--hover cursor-target">
+            <h3 class="card__title" data-i18n="card5.t">Презентации, PDF, гайды и упаковка услуг</h3>
+            <p class="card__text" data-i18n="card5.x">Когда у вас есть знания и опыт, но их нужно собрать в понятный, аккуратный и рабочий формат.</p>
+            <p class="card__hint" data-i18n="card5.h">Знания в аккуратном рабочем формате</p>
           </article>
         </div>
       </div>
@@ -104,124 +120,144 @@
     <!-- 4. Для кого -->
     <section class="section section--alt" id="audience">
       <div class="container narrow">
-        <h2 class="section__title">Для кого подойдёт работа со мной</h2>
-        <p>Для экспертов, специалистов и малого бизнеса, которым важно:</p>
-        <ul class="list-check">
-          <li>внедрить ИИ в работу без перегруза</li>
-          <li>использовать ChatGPT и промпты с пользой</li>
-          <li>упростить контент и тексты</li>
-          <li>сделать AI-ассистента под реальные задачи</li>
-          <li>создать понятный сайт под услуги</li>
-          <li>собрать более ясную систему в работе и подаче</li>
-        </ul>
-        <p>Если вам нужен не шум вокруг ИИ, а понятный рабочий инструмент — мы, скорее всего, подойдём друг другу.</p>
+        <div class="electric-border" data-electric-border data-eb-color="#7df9ff" data-eb-speed="1" data-eb-chaos="0.12" data-eb-radius="16" data-eb-thickness="2">
+          <div class="eb-canvas-wrap" aria-hidden="true"><canvas class="eb-canvas"></canvas></div>
+          <div class="eb-layers" aria-hidden="true">
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-bg-glow"></div>
+          </div>
+          <div class="eb-content">
+            <h2 class="section__title" data-i18n="audience.title">Для кого подойдёт работа со мной</h2>
+            <p data-i18n="audience.intro">Для экспертов, специалистов и малого бизнеса, которым важно:</p>
+            <ul class="list-check">
+              <li data-i18n="audience.li1">внедрить ИИ в работу без перегруза</li>
+              <li data-i18n="audience.li2">использовать ChatGPT и промпты с пользой</li>
+              <li data-i18n="audience.li3">упростить контент и тексты</li>
+              <li data-i18n="audience.li4">сделать AI-ассистента под реальные задачи</li>
+              <li data-i18n="audience.li5">создать понятный сайт под услуги</li>
+              <li data-i18n="audience.li6">собрать более ясную систему в работе и подаче</li>
+            </ul>
+            <p data-i18n="audience.outro">Если вам нужен не шум вокруг ИИ, а понятный рабочий инструмент — мы, скорее всего, подойдём друг другу.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 5. Результаты -->
     <section class="section" id="results">
       <div class="container narrow">
-        <h2 class="section__title">Что меняется после работы</h2>
-        <p>После работы со мной обычно становится:</p>
-        <ul class="list-check">
-          <li>понятнее, как использовать ИИ именно в вашей задаче</li>
-          <li>проще работать с контентом, текстами и подачей</li>
-          <li>легче объяснять свои услуги</li>
-          <li>удобнее вести клиента к заявке</li>
-          <li>спокойнее в ежедневной работе</li>
-          <li>меньше ручных действий там, где можно упростить процесс</li>
-        </ul>
-        <p>Я не обещаю «волшебную кнопку». Но могу помочь собрать рабочее решение, которое будет полезно именно вам.</p>
+        <div class="electric-border" data-electric-border data-eb-color="#7df9ff" data-eb-speed="1" data-eb-chaos="0.12" data-eb-radius="16" data-eb-thickness="2">
+          <div class="eb-canvas-wrap" aria-hidden="true"><canvas class="eb-canvas"></canvas></div>
+          <div class="eb-layers" aria-hidden="true">
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-bg-glow"></div>
+          </div>
+          <div class="eb-content">
+            <h2 class="section__title" data-i18n="results.title">Что меняется после работы</h2>
+            <p data-i18n="results.intro">После работы со мной обычно становится:</p>
+            <ul class="list-check">
+              <li data-i18n="results.li1">понятнее, как использовать ИИ именно в вашей задаче</li>
+              <li data-i18n="results.li2">проще работать с контентом, текстами и подачей</li>
+              <li data-i18n="results.li3">легче объяснять свои услуги</li>
+              <li data-i18n="results.li4">удобнее вести клиента к заявке</li>
+              <li data-i18n="results.li5">спокойнее в ежедневной работе</li>
+              <li data-i18n="results.li6">меньше ручных действий там, где можно упростить процесс</li>
+            </ul>
+            <p data-i18n="results.outro">Я не обещаю «волшебную кнопку». Но могу помочь собрать рабочее решение, которое будет полезно именно вам.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 6. Услуги -->
     <section class="section section--alt" id="services">
       <div class="container">
-        <h2 class="section__title">Услуги</h2>
+        <h2 class="section__title" data-i18n="services.title">Услуги</h2>
         <div class="services">
-          <article class="service-card">
+          <article class="service-card cursor-target">
             <div class="service-card__head">
-              <h3 class="service-card__title">AI-система для контента и текстов</h3>
+              <h3 class="service-card__title" data-i18n="svc1.t">AI-система для контента и текстов</h3>
               <p class="service-card__price">15 000 — 30 000 ₽</p>
             </div>
-            <p>Помогаю собрать систему контента, где не нужно каждый раз заново думать, что писать. Разбираю задачу, продукт и аудиторию, собираю структуру, делаю промпты под бизнес и объясняю, как использовать ChatGPT без случайного результата.</p>
-            <p><strong>Подходит, если:</strong></p>
+            <p data-i18n="svc1.p">Помогаю собрать систему контента, где не нужно каждый раз заново думать, что писать. Разбираю задачу, продукт и аудиторию, собираю структуру, делаю промпты под бизнес и объясняю, как использовать ChatGPT без случайного результата.</p>
+            <p><strong data-i18n="svc1.suit">Подходит, если:</strong></p>
             <ul>
-              <li>вы эксперт и устали выжимать контент из себя</li>
-              <li>посты выходят нерегулярно</li>
-              <li>тексты занимают слишком много времени</li>
-              <li>ИИ пробовали, но результат не устраивает</li>
+              <li data-i18n="svc1.suit1">вы эксперт и устали выжимать контент из себя</li>
+              <li data-i18n="svc1.suit2">посты выходят нерегулярно</li>
+              <li data-i18n="svc1.suit3">тексты занимают слишком много времени</li>
+              <li data-i18n="svc1.suit4">ИИ пробовали, но результат не устраивает</li>
             </ul>
-            <p><strong>Результат:</strong> экономия времени, более понятный контент, система вместо бесконечных попыток.</p>
-            <p class="service-card__hover-hint">Помогает сократить время и упростить процесс</p>
+            <p><strong data-i18n="svc1.res">Результат:</strong> <span data-i18n="svc1.resT">экономия времени, более понятный контент, система вместо бесконечных попыток.</span></p>
+            <p class="service-card__hover-hint" data-i18n="svc1.hint">Помогает сократить время и упростить процесс</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card cursor-target">
             <div class="service-card__head">
-              <h3 class="service-card__title">AI-ассистент для бизнеса</h3>
+              <h3 class="service-card__title" data-i18n="svc2.t">AI-ассистент для бизнеса</h3>
               <p class="service-card__price">20 000 — 50 000 ₽</p>
             </div>
-            <p>Собираю помощника под реальные процессы: ответы клиентам, логика сценариев, повторяющиеся задачи, внутренняя помощь в работе.</p>
-            <p><strong>Подходит, если:</strong></p>
+            <p data-i18n="svc2.p">Собираю помощника под реальные процессы: ответы клиентам, логика сценариев, повторяющиеся задачи, внутренняя помощь в работе.</p>
+            <p><strong data-i18n="svc2.suit">Подходит, если:</strong></p>
             <ul>
-              <li>много однотипных действий</li>
-              <li>часть задач постоянно делается вручную</li>
-              <li>хочется упростить коммуникацию</li>
-              <li>нужен не «бот ради бота», а полезный инструмент</li>
+              <li data-i18n="svc2.suit1">много однотипных действий</li>
+              <li data-i18n="svc2.suit2">часть задач постоянно делается вручную</li>
+              <li data-i18n="svc2.suit3">хочется упростить коммуникацию</li>
+              <li data-i18n="svc2.suit4">нужен не «бот ради бота», а полезный инструмент</li>
             </ul>
-            <p><strong>Результат:</strong> меньше рутины, быстрее ответы, удобнее процессы.</p>
-            <p class="service-card__hover-hint">Помогает сократить время и упростить процесс</p>
+            <p><strong data-i18n="svc2.res">Результат:</strong> <span data-i18n="svc2.resT">меньше рутины, быстрее ответы, удобнее процессы.</span></p>
+            <p class="service-card__hover-hint" data-i18n="svc2.hint">Помогает сократить время и упростить процесс</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card cursor-target">
             <div class="service-card__head">
-              <h3 class="service-card__title">Сайт для эксперта или бизнеса</h3>
+              <h3 class="service-card__title" data-i18n="svc3.t">Сайт для эксперта или бизнеса</h3>
               <p class="service-card__price">20 000 — 45 000 ₽</p>
             </div>
-            <p>Делаю понятные сайты под услуги: структура, тексты, HTML-реализация, адаптация под телефон, формы, логика пути клиента.</p>
-            <p><strong>Подходит, если:</strong></p>
+            <p data-i18n="svc3.p">Делаю понятные сайты под услуги: структура, тексты, HTML-реализация, адаптация под телефон, формы, логика пути клиента.</p>
+            <p><strong data-i18n="svc3.suit">Подходит, если:</strong></p>
             <ul>
-              <li>сайта ещё нет</li>
-              <li>сайт есть, но он не объясняет ценность</li>
-              <li>человеку сложно понять, зачем к вам обращаться</li>
-              <li>хочется больше ясности и доверия</li>
+              <li data-i18n="svc3.suit1">сайта ещё нет</li>
+              <li data-i18n="svc3.suit2">сайт есть, но он не объясняет ценность</li>
+              <li data-i18n="svc3.suit3">человеку сложно понять, зачем к вам обращаться</li>
+              <li data-i18n="svc3.suit4">хочется больше ясности и доверия</li>
             </ul>
-            <p><strong>Результат:</strong> понятная подача, лучшее первое впечатление, более удобный путь к заявке.</p>
-            <p class="service-card__hover-hint">Помогает сократить время и упростить процесс</p>
+            <p><strong data-i18n="svc3.res">Результат:</strong> <span data-i18n="svc3.resT">понятная подача, лучшее первое впечатление, более удобный путь к заявке.</span></p>
+            <p class="service-card__hover-hint" data-i18n="svc3.hint">Помогает сократить время и упростить процесс</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card cursor-target">
             <div class="service-card__head">
-              <h3 class="service-card__title">Калькуляторы и мини-сервисы</h3>
+              <h3 class="service-card__title" data-i18n="svc4.t">Калькуляторы и мини-сервисы</h3>
               <p class="service-card__price">25 000 — 60 000 ₽</p>
             </div>
-            <p>Разрабатываю интерактивные инструменты для сайта: калькуляторы, квизы, мини-сервисы, которые помогают клиенту не просто читать, а взаимодействовать.</p>
-            <p><strong>Подходит, если:</strong></p>
+            <p data-i18n="svc4.p">Разрабатываю интерактивные инструменты для сайта: калькуляторы, квизы, мини-сервисы, которые помогают клиенту не просто читать, а взаимодействовать.</p>
+            <p><strong data-i18n="svc4.suit">Подходит, если:</strong></p>
             <ul>
-              <li>хотите выделиться среди похожих сайтов</li>
-              <li>нужно вовлечение</li>
-              <li>хотите упростить клиенту выбор</li>
-              <li>важно показать серьёзный подход</li>
+              <li data-i18n="svc4.suit1">хотите выделиться среди похожих сайтов</li>
+              <li data-i18n="svc4.suit2">нужно вовлечение</li>
+              <li data-i18n="svc4.suit3">хотите упростить клиенту выбор</li>
+              <li data-i18n="svc4.suit4">важно показать серьёзный подход</li>
             </ul>
-            <p><strong>Результат:</strong> больше интереса к сайту, выше вовлечение, сильнее ощущение продуманного сервиса.</p>
-            <p class="service-card__hover-hint">Помогает сократить время и упростить процесс</p>
+            <p><strong data-i18n="svc4.res">Результат:</strong> <span data-i18n="svc4.resT">больше интереса к сайту, выше вовлечение, сильнее ощущение продуманного сервиса.</span></p>
+            <p class="service-card__hover-hint" data-i18n="svc4.hint">Помогает сократить время и упростить процесс</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card cursor-target">
             <div class="service-card__head">
-              <h3 class="service-card__title">Презентации и упаковка</h3>
+              <h3 class="service-card__title" data-i18n="svc5.t">Презентации и упаковка</h3>
               <p class="service-card__price">20 000 — 40 000 ₽</p>
             </div>
-            <p>Собираю ваши знания в понятную структуру: презентации, PDF, гайды, материалы для клиентов, упаковку услуг.</p>
-            <p><strong>Подходит, если:</strong></p>
+            <p data-i18n="svc5.p">Собираю ваши знания в понятную структуру: презентации, PDF, гайды, материалы для клиентов, упаковку услуг.</p>
+            <p><strong data-i18n="svc5.suit">Подходит, если:</strong></p>
             <ul>
-              <li>материал есть, но он не оформлен</li>
-              <li>хочется подать экспертность аккуратно и понятно</li>
-              <li>нужно перевести знания в рабочий формат</li>
+              <li data-i18n="svc5.suit1">материал есть, но он не оформлен</li>
+              <li data-i18n="svc5.suit2">хочется подать экспертность аккуратно и понятно</li>
+              <li data-i18n="svc5.suit3">нужно перевести знания в рабочий формат</li>
             </ul>
-            <p><strong>Результат:</strong> материал выглядит собранно, клиенту проще понять ценность, подача становится сильнее.</p>
-            <p class="service-card__hover-hint">Помогает сократить время и упростить процесс</p>
+            <p><strong data-i18n="svc5.res">Результат:</strong> <span data-i18n="svc5.resT">материал выглядит собранно, клиенту проще понять ценность, подача становится сильнее.</span></p>
+            <p class="service-card__hover-hint" data-i18n="svc5.hint">Помогает сократить время и упростить процесс</p>
           </article>
         </div>
       </div>
@@ -230,84 +266,104 @@
     <!-- 7. Как проходит работа -->
     <section class="section" id="process">
       <div class="container">
-        <h2 class="section__title">Как проходит работа</h2>
-        <ol class="timeline">
-          <li class="timeline__item">
-            <span class="timeline__num">1</span>
-            <div class="timeline__body">
-              <h3>Вы пишете мне</h3>
-              <p>Коротко рассказываете, с чем сейчас нужна помощь.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__num">2</span>
-            <div class="timeline__body">
-              <h3>Мы разбираем задачу</h3>
-              <p>Смотрим, что действительно нужно, а что можно не усложнять.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__num">3</span>
-            <div class="timeline__body">
-              <h3>Я предлагаю решение</h3>
-              <p>Объясняю, какой формат подойдёт лучше и почему.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__num">4</span>
-            <div class="timeline__body">
-              <h3>Делаю работу</h3>
-              <p>Собираю структуру, тексты, сайт, логику ассистента или инструмент.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__num">5</span>
-            <div class="timeline__body">
-              <h3>Объясняю, как использовать</h3>
-              <p>Чтобы результат не лежал «где-то отдельно», а работал у вас в реальности.</p>
-            </div>
-          </li>
-        </ol>
+        <div class="electric-border" data-electric-border data-eb-color="#7df9ff" data-eb-speed="1" data-eb-chaos="0.12" data-eb-radius="16" data-eb-thickness="2">
+          <div class="eb-canvas-wrap" aria-hidden="true"><canvas class="eb-canvas"></canvas></div>
+          <div class="eb-layers" aria-hidden="true">
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-bg-glow"></div>
+          </div>
+          <div class="eb-content">
+            <h2 class="section__title" data-i18n="process.title">Как проходит работа</h2>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <span class="timeline__num">1</span>
+                <div class="timeline__body">
+                  <h3 data-i18n="process.s1t">Вы пишете мне</h3>
+                  <p data-i18n="process.s1p">Коротко рассказываете, с чем сейчас нужна помощь.</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__num">2</span>
+                <div class="timeline__body">
+                  <h3 data-i18n="process.s2t">Мы разбираем задачу</h3>
+                  <p data-i18n="process.s2p">Смотрим, что действительно нужно, а что можно не усложнять.</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__num">3</span>
+                <div class="timeline__body">
+                  <h3 data-i18n="process.s3t">Я предлагаю решение</h3>
+                  <p data-i18n="process.s3p">Объясняю, какой формат подойдёт лучше и почему.</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__num">4</span>
+                <div class="timeline__body">
+                  <h3 data-i18n="process.s4t">Делаю работу</h3>
+                  <p data-i18n="process.s4p">Собираю структуру, тексты, сайт, логику ассистента или инструмент.</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__num">5</span>
+                <div class="timeline__body">
+                  <h3 data-i18n="process.s5t">Объясняю, как использовать</h3>
+                  <p data-i18n="process.s5p">Чтобы результат не лежал «где-то отдельно», а работал у вас в реальности.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 8. Подход -->
     <section class="section section--alt" id="approach">
       <div class="container narrow">
-        <h2 class="section__title">Как я работаю</h2>
-        <p>Я не использую одинаковые шаблоны для всех.</p>
-        <p>Сначала смотрю на:</p>
-        <ul class="list-check">
-          <li>вашу задачу</li>
-          <li>ваш продукт</li>
-          <li>вашу аудиторию</li>
-          <li>текущий способ работы</li>
-        </ul>
-        <p>И только потом собираю решение.</p>
-        <p>Мне важно не просто сделать что-то технологичное. Мне важно, чтобы это было понятно, полезно и применимо в вашей реальной работе.</p>
+        <div class="electric-border" data-electric-border data-eb-color="#7df9ff" data-eb-speed="1" data-eb-chaos="0.12" data-eb-radius="16" data-eb-thickness="2">
+          <div class="eb-canvas-wrap" aria-hidden="true"><canvas class="eb-canvas"></canvas></div>
+          <div class="eb-layers" aria-hidden="true">
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-bg-glow"></div>
+          </div>
+          <div class="eb-content">
+            <h2 class="section__title" data-i18n="approach.title">Как я работаю</h2>
+            <p data-i18n="approach.p1">Я не использую одинаковые шаблоны для всех.</p>
+            <p data-i18n="approach.p2">Сначала смотрю на:</p>
+            <ul class="list-check">
+              <li data-i18n="approach.li1">вашу задачу</li>
+              <li data-i18n="approach.li2">ваш продукт</li>
+              <li data-i18n="approach.li3">вашу аудиторию</li>
+              <li data-i18n="approach.li4">текущий способ работы</li>
+            </ul>
+            <p data-i18n="approach.p3">И только потом собираю решение.</p>
+            <p data-i18n="approach.p4">Мне важно не просто сделать что-то технологичное. Мне важно, чтобы это было понятно, полезно и применимо в вашей реальной работе.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 9. Сомнения -->
     <section class="section" id="doubts">
       <div class="container">
-        <h2 class="section__title">Что часто волнует перед первой встречей</h2>
+        <h2 class="section__title" data-i18n="doubts.title">Что часто волнует перед первой встречей</h2>
         <div class="faq">
-          <div class="faq__item">
-            <h3 class="faq__q">Я плохо разбираюсь в ИИ</h3>
-            <p class="faq__a">Это не проблема. Я объясняю простым языком и не перегружаю техническими деталями.</p>
+          <div class="faq__item cursor-target">
+            <h3 class="faq__q" data-i18n="faq1.q">Я плохо разбираюсь в ИИ</h3>
+            <p class="faq__a" data-i18n="faq1.a">Это не проблема. Я объясняю простым языком и не перегружаю техническими деталями.</p>
           </div>
-          <div class="faq__item">
-            <h3 class="faq__q">Боюсь, что всё будет слишком сложно</h3>
-            <p class="faq__a">Моя задача — как раз упростить и собрать понятную логику.</p>
+          <div class="faq__item cursor-target">
+            <h3 class="faq__q" data-i18n="faq2.q">Боюсь, что всё будет слишком сложно</h3>
+            <p class="faq__a" data-i18n="faq2.a">Моя задача — как раз упростить и собрать понятную логику.</p>
           </div>
-          <div class="faq__item">
-            <h3 class="faq__q">Не уверена, что мне это подойдёт</h3>
-            <p class="faq__a">Поэтому сначала мы разбираем запрос и только потом выбираем формат.</p>
+          <div class="faq__item cursor-target">
+            <h3 class="faq__q" data-i18n="faq3.q">Не уверена, что мне это подойдёт</h3>
+            <p class="faq__a" data-i18n="faq3.a">Поэтому сначала мы разбираем запрос и только потом выбираем формат.</p>
           </div>
-          <div class="faq__item">
-            <h3 class="faq__q">У меня уже был неудачный опыт</h3>
-            <p class="faq__a">Так бывает. Часто вопрос не в самом инструменте, а в том, как он был продуман и встроен в работу.</p>
+          <div class="faq__item cursor-target">
+            <h3 class="faq__q" data-i18n="faq4.q">У меня уже был неудачный опыт</h3>
+            <p class="faq__a" data-i18n="faq4.a">Так бывает. Часто вопрос не в самом инструменте, а в том, как он был продуман и встроен в работу.</p>
           </div>
         </div>
       </div>
@@ -316,102 +372,170 @@
     <!-- 10. Обо мне -->
     <section class="section section--alt" id="about">
       <div class="container narrow">
-        <h2 class="section__title">Обо мне</h2>
-        <p>Меня зовут Дарьяна Ушакова. Я промпт-инженер и веб-кодер.</p>
-        <p>Работаю на стыке структуры, текстов, логики и цифровых решений. Помогаю экспертам и бизнесу внедрять ИИ в работу спокойно, понятно и без лишней сложности.</p>
-        <p>Мне близок подход, где всё можно объяснить нормальным языком, собрать в систему и использовать в жизни, а не только «для вида».</p>
-        <p class="contacts">
-          <a href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">Telegram: @UshakovaDariana</a><br>
-          <a href="https://vk.com/ushakova_ai" target="_blank" rel="noopener">VK: ushakova_ai</a>
-        </p>
+        <div class="electric-border" data-electric-border data-eb-color="#7df9ff" data-eb-speed="1" data-eb-chaos="0.12" data-eb-radius="16" data-eb-thickness="2">
+          <div class="eb-canvas-wrap" aria-hidden="true"><canvas class="eb-canvas"></canvas></div>
+          <div class="eb-layers" aria-hidden="true">
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-bg-glow"></div>
+          </div>
+          <div class="eb-content">
+            <h2 class="section__title" data-i18n="about.title">Обо мне</h2>
+            <p data-i18n="about.p1">Меня зовут Дарьяна Ушакова. Я промпт-инженер и веб-кодер.</p>
+            <p data-i18n="about.p2">Работаю на стыке структуры, текстов, логики и цифровых решений. Помогаю экспертам и бизнесу внедрять ИИ в работу спокойно, понятно и без лишней сложности.</p>
+            <p data-i18n="about.p3">Мне близок подход, где всё можно объяснить нормальным языком, собрать в систему и использовать в жизни, а не только «для вида».</p>
+            <p class="contacts">
+              <a href="https://t.me/UshakovaDariana" target="_blank" rel="noopener" data-i18n="about.tg">Telegram: @UshakovaDariana</a><br>
+              <a href="https://vk.com/ushakova_ai" target="_blank" rel="noopener" data-i18n="about.vk">VK: ushakova_ai</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 11. Отзывы -->
     <section class="section" id="reviews">
       <div class="container">
-        <h2 class="section__title">Отзывы</h2>
-        <div class="reviews">
-          <blockquote class="review">
-            <p>Я постоянно откладывала контент, потому что не понимала, что именно писать. После работы с Дарьяной появилась структура, стало проще использовать ChatGPT и наконец ушло ощущение, что каждый текст нужно вытаскивать из себя. Сейчас у меня намного больше ясности и меньше лишних действий.</p>
-          </blockquote>
-          <blockquote class="review">
-            <p>Мы долго думали, нужен ли нам AI-ассистент, потому что не хотелось делать что-то «для галочки». В итоге всё собрали под реальные задачи, и это действительно разгрузило часть работы. Стало проще отвечать клиентам и меньше времени уходит на однотипные действия.</p>
-          </blockquote>
-          <blockquote class="review">
-            <p>Сайт у меня был, но он плохо объяснял, чем я вообще полезна. Дарьяна пересобрала структуру и тексты так, что теперь человек быстрее понимает мою услугу. Сайт стал выглядеть аккуратнее, понятнее и гораздо увереннее.</p>
-          </blockquote>
+        <h2 class="section__title" data-i18n="reviews.title">Отзывы</h2>
+        <p class="reviews__intro" data-i18n="reviews.intro">Потяните верхнюю карточку влево или нажмите «Следующий» — отзывы сменяются, как колода карт.</p>
+        <div class="testimonial-deck" id="testimonial-deck">
+          <article class="testimonial-card cursor-target" data-index="0">
+            <div class="testimonial-card__avatar" aria-hidden="true">К</div>
+            <blockquote class="testimonial-card__quote">
+              <p data-i18n="rev1">Я постоянно откладывала контент, потому что не понимала, что именно писать. После работы с Дарьяной появилась структура, стало проще использовать ChatGPT и наконец ушло ощущение, что каждый текст нужно вытаскивать из себя. Сейчас у меня намного больше ясности и меньше лишних действий.</p>
+            </blockquote>
+            <p class="testimonial-card__author" data-i18n="rev1a">Эксперт по контенту</p>
+          </article>
+          <article class="testimonial-card cursor-target" data-index="1">
+            <div class="testimonial-card__avatar" aria-hidden="true">К</div>
+            <blockquote class="testimonial-card__quote">
+              <p data-i18n="rev2">Мы долго думали, нужен ли нам AI-ассистент, потому что не хотелось делать что-то «для галочки». В итоге всё собрали под реальные задачи, и это действительно разгрузило часть работы. Стало проще отвечать клиентам и меньше времени уходит на однотипные действия.</p>
+            </blockquote>
+            <p class="testimonial-card__author" data-i18n="rev2a">Команда сервиса</p>
+          </article>
+          <article class="testimonial-card cursor-target" data-index="2">
+            <div class="testimonial-card__avatar" aria-hidden="true">Ч</div>
+            <blockquote class="testimonial-card__quote">
+              <p data-i18n="rev3">Сайт у меня был, но он плохо объяснял, чем я вообще полезна. Дарьяна пересобрала структуру и тексты так, что теперь человек быстрее понимает мою услугу. Сайт стал выглядеть аккуратнее, понятнее и гораздо увереннее.</p>
+            </blockquote>
+            <p class="testimonial-card__author" data-i18n="rev3a">Частная практика</p>
+          </article>
         </div>
+        <p class="testimonial-deck__controls">
+          <button type="button" class="btn btn--ghost btn--sm testimonial-deck__next cursor-target" data-i18n="reviews.next">Следующий отзыв</button>
+        </p>
       </div>
     </section>
 
     <!-- 12. Формат и стоимость -->
-    <section class="section section--alt" id="pricing">
-      <div class="container narrow">
-        <h2 class="section__title">Формат работы и стоимость</h2>
-        <p>Работаю онлайн. Можно начать с диагностической встречи, чтобы спокойно разобрать задачу и понять, какой формат подойдёт лучше.</p>
-        <p>Стоимость зависит от объёма задачи. Основные диапазоны по услугам:</p>
-        <ul class="list-check">
-          <li>контент и тексты: 15 000 — 30 000 ₽</li>
-          <li>AI-ассистенты: 20 000 — 50 000 ₽</li>
-          <li>сайт: 20 000 — 45 000 ₽</li>
-          <li>калькуляторы и мини-сервисы: 25 000 — 60 000 ₽</li>
-          <li>презентации и упаковка: 20 000 — 40 000 ₽</li>
-        </ul>
-        <p>Если вы пока не уверены, что именно нужно, можно начать просто с разбора.</p>
+    <section class="section section--alt pricing-modern" id="pricing">
+      <div class="pricing-modern__bg" aria-hidden="true"></div>
+      <div class="container pricing-modern__inner">
+        <h2 class="section__title pricing-modern__title" data-i18n="pricing.title">Формат работы и стоимость</h2>
+        <p class="pricing-modern__lead" data-i18n="pricing.lead">Работаю онлайн. Можно начать с диагностической встречи, чтобы спокойно разобрать задачу и понять, какой формат подойдёт лучше. Ниже — ориентиры по направлениям; точная сумма зависит от объёма и сроков.</p>
+        <div class="pricing-grid">
+          <article class="pricing-card cursor-target">
+            <h3 class="pricing-card__name" data-i18n="price1.n">Контент и тексты</h3>
+            <p class="pricing-card__desc" data-i18n="price1.d">Система промптов, структура контента, работа с ChatGPT под ваш бизнес.</p>
+            <div class="pricing-card__price-row">
+              <span class="pricing-card__price">15 000 — 30 000</span>
+              <span class="pricing-card__unit">₽</span>
+            </div>
+            <div class="pricing-card__divider" aria-hidden="true"></div>
+            <ul class="pricing-card__features">
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price1.f1">Разбор задачи и аудитории</span></li>
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price1.f2">Промпты под ваши сценарии</span></li>
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price1.f3">Объяснение, как пользоваться ИИ</span></li>
+            </ul>
+            <a class="btn btn--secondary btn--ripple btn--block" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener" data-i18n="price1.btn">Обсудить</a>
+          </article>
+          <article class="pricing-card pricing-card--popular cursor-target">
+            <span class="pricing-card__badge" data-i18n="price2.badge">Чаще выбирают</span>
+            <h3 class="pricing-card__name" data-i18n="price2.n">AI-ассистент</h3>
+            <p class="pricing-card__desc" data-i18n="price2.d">Логика ответов, сценарии, снятие рутины в коммуникациях.</p>
+            <div class="pricing-card__price-row">
+              <span class="pricing-card__price">20 000 — 50 000</span>
+              <span class="pricing-card__unit">₽</span>
+            </div>
+            <div class="pricing-card__divider" aria-hidden="true"></div>
+            <ul class="pricing-card__features">
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price2.f1">Под реальные процессы</span></li>
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price2.f2">Сценарии и структура</span></li>
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price2.f3">Меньше однотипных действий</span></li>
+            </ul>
+            <a class="btn btn--primary btn--ripple btn--block" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener" data-i18n="price2.btn">Написать в Telegram</a>
+          </article>
+          <article class="pricing-card cursor-target">
+            <h3 class="pricing-card__name" data-i18n="price3.n">Сайт и интерактив</h3>
+            <p class="pricing-card__desc" data-i18n="price3.d">Сайт под услуги, калькуляторы и мини-сервисы для вовлечения.</p>
+            <div class="pricing-card__price-row">
+              <span class="pricing-card__price">от 20 000</span>
+              <span class="pricing-card__unit">₽</span>
+            </div>
+            <p class="pricing-card__note" data-i18n="price3.note">Калькуляторы и сложные сервисы: до 60 000 ₽</p>
+            <div class="pricing-card__divider" aria-hidden="true"></div>
+            <ul class="pricing-card__features">
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price3.f1">Структура и тексты</span></li>
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price3.f2">Адаптивная вёрстка</span></li>
+              <li><span class="pricing-card__check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> <span data-i18n="price3.f3">Интерактив по задаче</span></li>
+            </ul>
+            <a class="btn btn--secondary btn--ripple btn--block" href="#calculator" data-i18n="price3.btn">Калькулятор стоимости</a>
+          </article>
+        </div>
+        <p class="pricing-modern__note" data-i18n="pricing.note">Презентации и упаковка: 20 000 — 40 000 ₽. Не уверены в формате — можно начать с разбора без обязательств.</p>
       </div>
     </section>
 
     <!-- 13. Калькулятор -->
     <section class="section calculator-section" id="calculator">
       <div class="container narrow">
-        <h2 class="section__title">Рассчитать примерную стоимость</h2>
-        <p class="calculator__intro">Выберите формат задачи и получите ориентир по стоимости. Точная сумма зависит от объёма, сроков и наполнения.</p>
+        <h2 class="section__title" data-i18n="calc.title">Рассчитать примерную стоимость</h2>
+        <p class="calculator__intro" data-i18n="calc.intro">Выберите формат задачи и получите ориентир по стоимости. Точная сумма зависит от объёма, сроков и наполнения.</p>
 
         <form class="calc-form" id="price-calculator" novalidate>
           <fieldset class="calc-fieldset">
-            <legend>Что вам нужно</legend>
+            <legend data-i18n="calc.l1">Что вам нужно</legend>
             <div class="calc-options">
-              <label class="calc-option"><input type="radio" name="service" value="content" required> контент и тексты</label>
-              <label class="calc-option"><input type="radio" name="service" value="assistant"> AI-ассистент</label>
-              <label class="calc-option"><input type="radio" name="service" value="site"> сайт</label>
-              <label class="calc-option"><input type="radio" name="service" value="calc"> калькулятор / мини-сервис</label>
-              <label class="calc-option"><input type="radio" name="service" value="pack"> презентация / упаковка</label>
+              <label class="calc-option"><input type="radio" name="service" value="content" required> <span data-i18n="calc.o1">контент и тексты</span></label>
+              <label class="calc-option"><input type="radio" name="service" value="assistant"> <span data-i18n="calc.o2">AI-ассистент</span></label>
+              <label class="calc-option"><input type="radio" name="service" value="site"> <span data-i18n="calc.o3">сайт</span></label>
+              <label class="calc-option"><input type="radio" name="service" value="calc"> <span data-i18n="calc.o4">калькулятор / мини-сервис</span></label>
+              <label class="calc-option"><input type="radio" name="service" value="pack"> <span data-i18n="calc.o5">презентация / упаковка</span></label>
             </div>
           </fieldset>
 
           <fieldset class="calc-fieldset calc-fieldset--step">
-            <legend>На каком этапе вы сейчас</legend>
+            <legend data-i18n="calc.l2">На каком этапе вы сейчас</legend>
             <div class="calc-options">
-              <label class="calc-option"><input type="radio" name="stage" value="idea" required> пока только идея</label>
-              <label class="calc-option"><input type="radio" name="stage" value="structure"> нужна структура</label>
-              <label class="calc-option"><input type="radio" name="stage" value="build"> нужна реализация</label>
-              <label class="calc-option"><input type="radio" name="stage" value="refine"> нужно доработать то, что уже есть</label>
+              <label class="calc-option"><input type="radio" name="stage" value="idea" required> <span data-i18n="calc.s1">пока только идея</span></label>
+              <label class="calc-option"><input type="radio" name="stage" value="structure"> <span data-i18n="calc.s2">нужна структура</span></label>
+              <label class="calc-option"><input type="radio" name="stage" value="build"> <span data-i18n="calc.s3">нужна реализация</span></label>
+              <label class="calc-option"><input type="radio" name="stage" value="refine"> <span data-i18n="calc.s4">нужно доработать то, что уже есть</span></label>
             </div>
           </fieldset>
 
           <fieldset class="calc-fieldset calc-fieldset--step">
-            <legend>Нужен ли второй язык</legend>
+            <legend data-i18n="calc.l3">Нужен ли второй язык</legend>
             <div class="calc-options calc-options--inline">
-              <label class="calc-option"><input type="radio" name="lang" value="yes" required> да</label>
-              <label class="calc-option"><input type="radio" name="lang" value="no"> нет</label>
+              <label class="calc-option"><input type="radio" name="lang" value="yes" required> <span data-i18n="calc.yes">да</span></label>
+              <label class="calc-option"><input type="radio" name="lang" value="no"> <span data-i18n="calc.no">нет</span></label>
             </div>
           </fieldset>
 
           <fieldset class="calc-fieldset calc-fieldset--step">
-            <legend>Срочность</legend>
+            <legend data-i18n="calc.l4">Срочность</legend>
             <div class="calc-options">
-              <label class="calc-option"><input type="radio" name="urgency" value="normal" required> без спешки</label>
-              <label class="calc-option"><input type="radio" name="urgency" value="soon"> в ближайшее время</label>
-              <label class="calc-option"><input type="radio" name="urgency" value="urgent"> срочно</label>
+              <label class="calc-option"><input type="radio" name="urgency" value="normal" required> <span data-i18n="calc.u1">без спешки</span></label>
+              <label class="calc-option"><input type="radio" name="urgency" value="soon"> <span data-i18n="calc.u2">в ближайшее время</span></label>
+              <label class="calc-option"><input type="radio" name="urgency" value="urgent"> <span data-i18n="calc.u3">срочно</span></label>
             </div>
           </fieldset>
 
-          <button type="submit" class="btn btn--primary btn--block">Рассчитать стоимость <span class="btn__arrow" aria-hidden="true">→</span></button>
+          <button type="submit" class="btn btn--primary btn--ripple btn--block cursor-target"><span data-i18n="calc.submit">Рассчитать стоимость</span> <span class="btn__arrow" aria-hidden="true">→</span></button>
         </form>
 
         <div class="calc-result" id="calc-result" hidden>
-          <p class="calc-result__label">Примерный диапазон</p>
+          <p class="calc-result__label" data-i18n="calc.resultLabel">Примерный диапазон</p>
           <p class="calc-result__value" id="calc-result-text">от — ₽ до — ₽</p>
         </div>
       </div>
@@ -420,11 +544,11 @@
     <!-- 14. Финал -->
     <section class="section section--cta" id="contact">
       <div class="container narrow">
-        <h2 class="section__title">Если хотите спокойно разобрать свою задачу — напишите мне</h2>
-        <p>Без давления и без сложных разговоров. Просто посмотрим, что вам действительно нужно, и подберём формат, который будет полезен именно вам.</p>
+        <h2 class="section__title" data-i18n="contact.title">Если хотите спокойно разобрать свою задачу — напишите мне</h2>
+        <p data-i18n="contact.p">Без давления и без сложных разговоров. Просто посмотрим, что вам действительно нужно, и подберём формат, который будет полезен именно вам.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">Написать в Telegram <span class="btn__arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn--ghost" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">Обсудить проект <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--primary btn--neon cursor-target" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener"><span data-i18n="contact.a1">Написать в Telegram</span> <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost btn--neon cursor-target" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener"><span data-i18n="contact.a2">Обсудить проект</span> <span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -432,14 +556,27 @@
 
   <footer class="site-footer">
     <div class="container footer__inner">
-      <p>© Дарьяна Ушакова · промпт-инженер и веб-кодер</p>
+      <p data-i18n="footer.copy">© Дарьяна Ушакова · промпт-инженер и веб-кодер</p>
       <p class="footer__links">
-        <a href="https://t.me/UshakovaDariana" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://vk.com/ushakova_ai" target="_blank" rel="noopener">VK</a>
+        <a class="cursor-target" href="https://t.me/UshakovaDariana" target="_blank" rel="noopener" data-i18n="footer.tg">Telegram</a>
+        <a class="cursor-target" href="https://vk.com/ushakova_ai" target="_blank" rel="noopener" data-i18n="footer.vk">VK</a>
       </p>
     </div>
   </footer>
 
+  <div id="target-cursor" class="target-cursor" hidden aria-hidden="true">
+    <div class="target-cursor__spin">
+      <span class="target-cursor__dot"></span>
+      <span class="target-cursor__corner target-cursor__corner--tl"></span>
+      <span class="target-cursor__corner target-cursor__corner--tr"></span>
+      <span class="target-cursor__corner target-cursor__corner--br"></span>
+      <span class="target-cursor__corner target-cursor__corner--bl"></span>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="electric-border.js"></script>
+  <script src="main.js"></script>
   <script>
     (function () {
       var bases = {
@@ -474,15 +611,35 @@
         min = roundTo500(min);
         max = roundTo500(max);
         if (min > max) { var t = min; min = max; max = t; }
+        window.__lastCalc = { min: min, max: max };
         var el = document.getElementById('calc-result');
         var txt = document.getElementById('calc-result-text');
-        txt.textContent = 'от ' + min.toLocaleString('ru-RU') + ' ₽ до ' + max.toLocaleString('ru-RU') + ' ₽';
+        var lang = window.getSiteLang ? window.getSiteLang() : 'ru';
+        if (lang === 'en') {
+          txt.textContent = 'from ' + min.toLocaleString('en-US') + ' ₽ to ' + max.toLocaleString('en-US') + ' ₽';
+        } else {
+          txt.textContent = 'от ' + min.toLocaleString('ru-RU') + ' ₽ до ' + max.toLocaleString('ru-RU') + ' ₽';
+        }
         el.hidden = false;
         el.classList.remove('calc-result--pop');
         void el.offsetWidth;
         el.classList.add('calc-result--pop');
         el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
+
+      function formatCalcResult() {
+        var r = window.__lastCalc;
+        var txt = document.getElementById('calc-result-text');
+        var el = document.getElementById('calc-result');
+        if (!r || !txt || !el || el.hidden) return;
+        var lang = window.getSiteLang ? window.getSiteLang() : 'ru';
+        if (lang === 'en') {
+          txt.textContent = 'from ' + r.min.toLocaleString('en-US') + ' ₽ to ' + r.max.toLocaleString('en-US') + ' ₽';
+        } else {
+          txt.textContent = 'от ' + r.min.toLocaleString('ru-RU') + ' ₽ до ' + r.max.toLocaleString('ru-RU') + ' ₽';
+        }
+      }
+      document.addEventListener('site-lang-change', formatCalcResult);
     })();
   </script>
 </body>
